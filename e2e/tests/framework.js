@@ -26,7 +26,7 @@ const uuid = Math.random().toString(36).substring(2, 15) + Math.random().toStrin
  * @return {Secret|undefined}
  */
 const waitForSecret = async (ns, name) => {
-  for (let i = 0; i <= 30; i++) {
+  for (let i = 0; i <= 60; i++) {
     try {
       const secret = await kubeClient
         .api.v1

@@ -71,7 +71,7 @@ describe('secretsmanager', async () => {
     }).catch(err => {
       expect(err).to.equal(null)
     })
-    await delay(2000)
+    await delay(6000)
     secret = await waitForSecret('default', `e2e-secretmanager-${uuid}`)
     expect(secret.body.data.username).to.equal('eW91ciBtb20=')
     expect(secret.body.data.password).to.equal('MTIzNA==')
@@ -182,7 +182,7 @@ describe('secretsmanager', async () => {
     }).catch(err => {
       expect(err).to.equal(null)
     })
-    await delay(2000)
+    await delay(6000)
     secret = await waitForSecret('default', `e2e-secretmanager-x-region-${uuid}`)
     expect(secret.body.data.username).to.equal('eW91ciBtb20=')
     expect(secret.body.data.password).to.equal('MTIzNA==')
